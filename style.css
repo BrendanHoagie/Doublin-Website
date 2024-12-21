@@ -1,3 +1,8 @@
+@font-face {
+  font-family: IndieFlower;
+  src: url('fonts/IndieFlower.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +12,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #dfdddd;
+  background-color: #CEAF8C;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,6 +82,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 12px;
   background: #fff;
   backface-visibility: hidden;
@@ -87,11 +93,13 @@ body {
 
 
 .page-one {
+  font-size: 18px;
   transform: rotateY(0deg);
   transition: transform 0.5s ease-in-out;
 }
 
 .page-two {
+  font-size: 16px;
   transform: rotateY(180deg);
   transition: transform 0.5s ease-in-out;
 }
@@ -108,4 +116,5 @@ body {
 
 .content h2 {
   margin-bottom: 1rem;
+  text-align: center;
 }
