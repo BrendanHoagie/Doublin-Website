@@ -81,6 +81,8 @@ body {
   background: #fff;
   backface-visibility: hidden;
   z-index: 1;
+  transform-origin: left;
+  transition: opacity 0.5s ease-in-out;
 }
 
 
@@ -95,11 +97,12 @@ body {
 }
 
 .card.flipped .page-one {
-  transform-origin: center left;
+  transform-origin: left;
   transform: rotateY(-180deg);
 }
 
 .card.flipped .page-two {
+  transform-origin: left;
   transform: rotateY(0deg);
 }
 
