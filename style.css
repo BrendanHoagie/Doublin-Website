@@ -25,7 +25,7 @@ body {
   inset 300px 0 50px rgba(0, 0, 0, 0.4);
   transform: perspective(2000px) rotateZ(0); 
   transform-style: preserve-3d;
-  transform: all 1s ease;
+  transition: all 1s ease;
 }
 
 .cover {
@@ -38,7 +38,8 @@ body {
   border-radius: 10px;
   transform-origin: left;
   transform-style: preserve-3d;
-  transform: all 1s ease-in;
+  transition: all 1s ease-in;
+  z-index: 2;
 }
 
 .cover img {
@@ -61,11 +62,14 @@ body {
     inset 20px 0 50px rgba(0, 0, 0, 0.4);
 }
 
-.card:hover .cover{
+.card:hover .cover {
   transform: rotateY(-135deg);   
 }
 
 .content {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -74,6 +78,32 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 12px;
+  background: #fff;
+  backface-visibility: hidden;
+  visibility: hidden;
+  z-index: 1;
+}
+
+
+.page-one {
+  transform: rotateY(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.page-two {
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card.flipped .page-one {
+  transform-origin: center left;
+  transform: rotateY(-180deg);
+  visibility: visible;
+}
+
+.card.flipped .page-two {
+  transform: rotateY(0deg);
+  visibility: visible;
 }
 
 .content h2 {
