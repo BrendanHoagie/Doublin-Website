@@ -44,7 +44,7 @@ body {
   transform-origin: left;
   transform-style: preserve-3d;
   transition: all 1s ease-in;
-  z-index: 2;
+  z-index: 8;
 }
 
 .cover img {
@@ -86,22 +86,52 @@ body {
   font-size: 12px;
   background: #fff;
   backface-visibility: hidden;
-  z-index: 1;
+  z-index: 6;
   transform-origin: left;
-  transition: opacity 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 
 .page-one {
   font-size: 18px;
-  transform: rotateY(0deg);
+  z-index: 5;
   transition: transform 0.5s ease-in-out;
+  transform: rotateY(0deg);
 }
 
 .page-two {
   font-size: 16px;
-  transform: rotateY(180deg);
+  z-index: 4;
   transition: transform 0.5s ease-in-out;
+  transform: rotateY(90deg);
+}
+
+.page-three {
+  font-size: 18px;
+  z-index: 3;
+  transition: transform 0.5s ease-in-out;
+  transform: rotateY(180deg);
+}
+
+.page-four {
+  font-size: 18px;
+  z-index: 2;
+  transition: transform 0.5s ease-in-out;
+  transform: rotateY(270deg);
+}
+
+.page-five {
+  font-size: 18px;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+  transform: rotateY(360deg);
+}
+
+.page-six {
+  font-size: 18px;
+  z-index: 0;
+  transition: transform 0.5s ease-in-out;
+  transform: rotateY(360deg);
 }
 
 .card.flipped .page-one {
@@ -111,7 +141,27 @@ body {
 
 .card.flipped .page-two {
   transform-origin: left;
-  transform: rotateY(0deg);
+  transform: rotateY(-90deg);
+}
+
+.card.flipped .page-three {
+  transform-origin: left;
+  transform: rotateY(90deg);
+}
+
+.card.flipped .page-four {
+  transform-origin: left;
+  transform: rotateY(180deg);
+}
+
+.card.flipped .page-five {
+  transform-origin: left;
+  transform: rotateY(180deg);
+}
+
+.card.flipped .page-six {
+  transform-origin: left;
+  transform: rotateY(180deg);
 }
 
 .content h2 {
