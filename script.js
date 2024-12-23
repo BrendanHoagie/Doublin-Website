@@ -34,6 +34,16 @@ document.addEventListener('wheel', (e) => {
   }
 });
 
+function nextPage() {
+  currentPage++;
+  updatePages();
+}
+
+function prevPage() {
+  currentPage--;
+  updatePages();
+}
+
 // function to flip the pages while keeping rotations correct
 function updatePages() {
   pages.forEach((page, index) => {

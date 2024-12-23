@@ -91,6 +91,32 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
+.page button {
+  position: absolute;
+  bottom: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #CEAF8C;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Slightly darker background on hover */
+.page button:hover {
+  background-color: #9a7b5e; 
+}
+
+/* Positioning the 'Next' button at the bottom right */
+.page .next-btn {
+  right: 20px;
+}
+
+/* Positioning the 'Previous' button at the bottom left */
+.page .prev-btn {
+  left: 20px;
+}
 
 .page-one {
   font-size: 18px;
